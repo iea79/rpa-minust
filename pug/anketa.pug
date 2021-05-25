@@ -1,0 +1,335 @@
+extends layout/layout.pug
+block variables
+    - pageNum = 0;
+    - pageName = "Анкета";
+block content
+    - tooltip = '<p>Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.</p><p>Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.</p>'
+    // begin notification
+    .notification
+        i.icon_alert 
+        .notification__text Просьба ознакомиться с 
+            a(href="") Руководством пользователя 
+            | и 
+            a(href="") Видеоинструкцией по работе с порталом 
+            | перед началом заполнения данных
+
+        .notification__action
+            button.btn.btn_contrast Закрыть уведомление
+
+    // end notification
+
+    // begin form
+    .form
+        .form__toggle.active
+        .form__legend Основные данные
+            i.icon_alert(class="tooltip" title=tooltip)
+
+        .form__body.open
+            .avatar
+                .avatar__img
+                    img(src="img/ava-lg.png", alt="")
+                    .avatar__add
+                .avatar__delete
+                    i.icon_close 
+                    | Удалить
+
+            .form__sub Общая информация
+
+            .form__row
+                .form__item
+                    label.form__label Фамилия *
+                    +input("Введите вашу фамилию")
+                .form__item
+                    label.form__label Имя *
+                    +input("Введите ваше имя")
+                .form__item
+                    label.form__label Отчество *
+                    +input("Введите ваше отчество", false)
+                    +checkbox("Нет отчества", true)
+                .form__item
+                    label.form__label Гражданство *
+                    +input("выберите страну")
+                    +checkbox("Нет гражданства")
+                .form__item
+                    label.form__label Электронная почта *
+                    +input("Введите ваш e-mail")
+                .form__item
+                    label.form__label Номер телефона *
+                    +input("+7 727 458 45 58")
+                .form__item
+                    label.form__label Семейное положение *
+                    +select("Семейное положение", ["Холост", "Женат"], false)
+                .form__item
+                    label.form__label Пол *
+                    +radio("Мужской", "gender", true)
+                    +radio("Женский", "gender")
+
+            .form__sub Дополнительная информация
+
+            .form__row
+                .form__item.form__item_semy
+                    label.form__label Учебное заведение, которое вы закончили *
+                    +select("Выберите одно или несколько учебных заведений")
+
+            .form__row
+                .form__item
+                    label.form__label СНИЛС *
+                    +input("Введите номер СНИЛС")
+                .form__item
+                    label.form__label Дата СНИЛС *
+                    +input("Введите дату выдачи СНИЛС")
+                .form__item
+                    label.form__label ИИН *
+                    +input("Введите ваш ИИН")
+                .form__item
+                    label.form__label Способ подачи заявления *
+                    +select("выберите из доступных способов подачи")
+
+            .form__action
+                button.btn(type="submit") Сохранить изменения
+                .form__req * обязательные поля
+
+    // end form
+
+    // begin form
+    .form
+        .form__toggle
+        .form__legend Паспортные данные абитуриента
+            i.icon_alert(class="tooltip" title=tooltip)
+
+        .form__body
+
+            .form__sub Данные документов
+
+            .form__row
+                .form__item
+                    label.form__label Тип документа *
+                    +select("выберите тип документа")
+                .form__item
+                    label.form__label Серия *
+                    +input("Введите серию")
+                .form__item
+                    label.form__label Номер документа *
+                    +input("Введите номер вашего документа")
+                .form__item
+                    label.form__label Код подразделения
+                    +input("введите код")
+                .form__item
+                    label.form__label Когда выдан *
+                    +input("Введите дату выдачи документа")
+                .form__item
+                    label.form__label Кем выдан документ *
+                    +input("Пример: министерство юстиции РФ")
+                .form__item
+                    label.form__label Место рождения *
+                    +input("введите ваше место рождения")
+
+            .form__sub Оригиналы документов
+
+            .form__row
+                .form__item.form__item_tripple
+                    label.form__label Разворот с фотографией *
+                    +file("q1")
+                    .form__info 
+                        a(href="") Здесь 
+                        | вы можете посмотреть образец
+                .form__item.form__item_tripple
+                    label.form__label Разворот с текущим местом регистрации *
+                    +file("q2")
+                    .form__info 
+                        a(href="") Здесь 
+                        | вы можете посмотреть образец
+                .form__item.form__item_tripple
+                    label.form__label Страница сведений о ранее выданном паспорте *
+                    +file("q3")
+                    .form__info 
+                        a(href="") Здесь 
+                        | вы можете посмотреть образец
+
+            .form__action
+                button.btn(type="submit") Сохранить изменения
+                .form__req * обязательные поля
+
+    // end form
+
+    // begin form
+    .form
+        .form__toggle
+        .form__legend Место регистрации и место проживания
+            i.icon_alert(class="tooltip" title=tooltip)
+
+        .form__body
+            .form__sub Адрес регистрации
+
+            .form__row
+                .form__item
+                    label.form__label Страна *
+                    +select("нажмите для выбора страны")
+                .form__item
+                    label.form__label Населенный пункт *
+                    +input("Введите название населенного пункта")
+                .form__item
+                    label.form__label Улица
+                    +input("Введите название улицы")
+                .form__item
+                    label.form__label Дом *
+                    +input("введите номер дома")
+                .form__item
+                    label.form__label Корпус
+                    +input("Введите номер корпуса")
+                .form__item
+                    label.form__label Квартира
+                    +input("введите номер квартиры")
+                .form__item
+                    label.form__label Индекс
+                    +input("введите номер почтового индекса")
+                .form__item.form__item_full.form__item_skiny
+                    +checkbox("Адрес фактического проживания совпадает с адресом регистрации")
+
+            .form__sub Адрес фактического проживания
+
+            .form__row
+                .form__item
+                    label.form__label Страна *
+                    +select("нажмите для выбора страны")
+                .form__item
+                    label.form__label Населенный пункт *
+                    +input("Введите название населенного пункта")
+                .form__item
+                    label.form__label Улица
+                    +input("Введите название улицы")
+                .form__item
+                    label.form__label Дом *
+                    +input("введите номер дома")
+                .form__item
+                    label.form__label Корпус
+                    +input("Введите номер корпуса")
+                .form__item
+                    label.form__label Квартира
+                    +input("введите номер квартиры")
+                .form__item
+                    label.form__label Индекс
+                    +input("введите номер почтового индекса")
+
+            .form__action
+                button.btn(type="submit") Сохранить изменения
+                .form__req * обязательные поля
+
+    // end form
+
+    // begin form
+    .form
+        .form__toggle
+        .form__legend Сведения об образовании
+            i.icon_alert(class="tooltip" title=tooltip)
+
+        .form__body
+            .form__sub Общие сведения об образовании
+
+            .form__row
+                .form__item.form__item_tripple
+                    label.form__label Вид образования *
+                    +select("выберите вид образования")
+                .form__item.form__item_tripple
+                    label.form__label Наименование учебного заведения *
+                    +input("Введите полное наименование учебного заведения")
+                .form__item.form__item_tripple
+                    label.form__label Страна учебного заведения *
+                    +select("Выберите страну")
+                .form__item
+                    label.form__label Форма обучения *
+                    +select("Выберите форму обучения")
+                .form__item
+                    label.form__label Год окончания *
+                    +input("Введите год окончания")
+                .form__item
+                    label.form__label Изучаемый иностранный язык
+                    +select("Выберите изучаемый язык")
+                .form__item.form__item_semy_lg
+                    label.form__label Участие в олимпиадах и достижения 
+                    +textarea("Введите свои достижения, перечислите олимпиады")
+
+            .form__sub Оригиналы документов
+
+            .form__row
+                .form__item.form__item_tripple
+                    label.form__label Разворот обложки аттестата *
+                    +file("a1")
+                    .form__info 
+                        a(href="") Здесь 
+                        | вы можете посмотреть образец
+                .form__item.form__item_tripple
+                    label.form__label Фото приложения *
+                    +file("a2")
+                    .form__info 
+                        a(href="") Здесь 
+                        | вы можете посмотреть образец
+                .form__item.form__item_tripple
+                    label.form__label Фото разворота приложения *
+                    +file("a3")
+                    .form__info 
+                        a(href="") Здесь 
+                        | вы можете посмотреть образец
+
+            .form__add
+                .form__addIcon
+                .form__addLabel Добавить учебное заведение
+
+            .form__action
+                button.btn(type="submit") Сохранить изменения
+                .form__req * обязательные поля
+
+    // end form
+
+    // begin form
+    .form
+        .form__toggle
+        .form__legend Дополнительные файлы
+            i.icon_alert(class="tooltip" title=tooltip)
+
+        .form__body
+            .form__subtitle Здесь Вы можете добавить иные документы по преимущественному поступлению
+            .form__row.form__row_short
+                .form__item.form__item_full
+                    label.form__label Наименование документа *
+                    +input("Введите наименование документа")
+                .form__item.form__item_tripple
+                    label.form__label Номер документа
+                    +input("введите номер документа")
+                .form__item.form__item_tripple
+                    label.form__label Дата выдачи документа
+                    +input("Введите дату выдачи")
+                .form__item.form__item_tripple
+                    label.form__label Подтверждающий документ *
+                    +file("d1")
+
+            .form__action
+                button.btn(type="submit") Сохранить изменения
+                .form__req * обязательные поля
+
+        // end form
+
+    // begin form
+    .form
+        .form__toggle
+        .form__legend Дополнительная информация
+            i.icon_alert(class="tooltip" title=tooltip)
+
+        .form__body
+            .form__subtitle Здесь Вы можете заполнить дополнительную информацию, которую нужно учесть при поступлении
+            .form__row
+                .form__item.form__item_full
+                    label.form__check.form__check_row
+                        input(type="checkbox" checked="")
+                        span Необходимость в общежитии во время учебы
+
+                    label.form__check.form__check_row
+                        input(type="checkbox" checked="")
+                        span Нужны специальные условия при проведении вступительных испытаний 
+
+
+            .form__action
+                button.btn(type="submit") Сохранить изменения
+                .form__req * обязательные поля
+
+        // end form

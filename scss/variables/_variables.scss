@@ -1,0 +1,71 @@
+/* Global variables */
+/* ======================================================================== */
+$main_font_family: "Ubuntu";
+$main_color: #162739;
+$main_line_height: 1.2;
+$main_font_size: 14px;
+
+$container_width: 80em;
+
+$footer_height: auto;
+
+// Color collection for elements
+$color_primary: #7b8287;
+$color_success: #36a566;
+$color_info: #03a9f4;
+$color_warning: #fca33e;
+$color_danger: #ff1a1a;
+$color_withe: #ffffff;
+
+$el-colors: (
+	primary: $color_primary, // color for .element__primary
+	success: $color_success, // color for .element__success
+	info: $color_info, // color for .element__info
+	warning: $color_warning, // color for .element__warning
+	danger: $color_danger, // color for .element__danger
+);
+
+/* Grid */
+/* ======================================================================== */
+$grid_padding: 20px;
+
+/* Form */
+/* ======================================================================== */
+// Input variables
+
+// Input color
+$input_color: $main_color;
+$input_bg_color: #F3F9FF;
+$input_border_color: #EAEAEA;
+$input_placeholder_color: #9EA0A3;
+
+// Input hover color
+$input_hover_color: $main_color;
+$input_hover_bg_color: $input_bg_color;
+$input_hover_border_color: $input_border_color;
+$input_hover_placeholder_color: $input_placeholder_color;
+
+// Input focus color
+$input_focus_color: $main_color;
+$input_focus_bg_color: $input_bg_color;
+$input_focus_border_color: #0BAE78;
+$input_focus_placeholder_color: $input_placeholder_color;
+
+// Input disabled color
+$input_disabled_color: #fff;
+$input_disabled_bg_color: #ccc;
+$input_disabled_border_color: #ccc;
+$input_disabled_placeholder_color: #fff;
+
+// Input error color
+$input_error_color: red;
+$input_error_bg_color: $input_bg_color;
+$input_error_border_color: red;
+$input_error_placeholder_color: red;
+
+// Button variables
+$btn_default_bg_color: #0BAE78;
+$btn_default_text_color: $color_withe;
+$btn_contrast_text_color: $color_withe;
+$btn_default_bg_color_hover: #1DBE89;
+$btn_default_bg_color_active: #10A372;

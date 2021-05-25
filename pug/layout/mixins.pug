@@ -1,0 +1,56 @@
+mixin input(placeholder, valid=true, type="text")
+    if valid
+        input.form__field(type=type, placeholder=placeholder)
+    else
+        input.form__field.invalid(type=type, placeholder=placeholder)
+
+mixin textarea(placeholder, valid=true)
+    if valid
+        textarea.form__field(placeholder=placeholder)
+    else
+        textarea.form__field.invalid(placeholder=placeholder)
+
+mixin select(placehoder, options, valid=true)
+    - invalid = ""; 
+    if !valid
+        - invalid = "invalid"; 
+
+    select.form__select(name="" class=invalid data-placeholder=placehoder)
+        if options
+            option(value="")
+            each item in options
+                option(value=item)=item
+        else
+            option(value='')
+            option(value='Значение 1') Значение 1
+            option(value='Значение 2') Значение 2
+            option(value='Значение 3') Значение 3
+            option(value='Значение 4') Значение 4
+            option(value='Значение 5') Значение 5
+            option(value='Значение 6') Значение 6
+            option(value='Значение 7') Значение 7
+            option(value='Значение 8') Значение 8
+            option(value='Значение 9') Значение 9
+            option(value='Значение 10') Значение 10
+
+mixin checkbox(label, check=false, attr="")
+    label.form__check(class=attr)
+        if check
+            input(type="checkbox" checked="")
+        else
+            input(type="checkbox")
+        span=label
+
+mixin radio(label, name, check=false, attr="")
+    label.form__check(class=attr)
+        if check
+            input(type="radio" name=name checked="")
+        else
+            input(type="radio" name=name)
+        span=label
+
+mixin file(id)
+    label.form__file(for=id)
+        input(type="file" id=id)
+        input.form__field(type="text", placeholder="укажите расположение документа")
+        span.btn.btn_border Обзор

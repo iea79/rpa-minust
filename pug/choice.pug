@@ -1,0 +1,80 @@
+extends layout/layout.pug
+block variables
+    - pageNum = 2;
+    - pageName = "Выбор направления подготовки";
+block content
+    // begin notification
+    .notification
+        i.icon_alert 
+        .notification__text Просьба ознакомиться с 
+            a(href="") Руководством пользователя 
+            | и 
+            a(href="") Видеоинструкцией по работе с порталом 
+            | перед началом заполнения данных
+
+        .notification__action
+            button.btn.btn_contrast Закрыть уведомление
+
+    // end notification
+
+    // begin form
+    .form.form_slim
+        .form__legend Редактирование направлений
+
+        .form__row.form__row_search
+            .form__item
+                +input("Введите направление подготовки")
+                +checkbox("Особое право")
+            .form__item
+                +select("Уровень образования")
+            .form__item
+                +select("Форма обучения")
+            .form__item
+                +select("Форма оплаты")
+            .form__item.form__item_small
+                button.btn.btn_small Поиск
+
+    // end form
+
+    // begin choice
+    .choice
+        // begin choice__list
+        .choice__list
+            each item in [false, true, true, false, true, false, true, true]
+                // Row
+                .choice__row
+                    .choice__head
+                        +checkbox("ВГУЮ (РПА Минюуста России). 40.04.01 40.04.01 Юриспруденция Заочная Бюджетная основа", item, 'form__check_row')
+                    .choice__props
+                        .choice__prop Уровень образования: 
+                            b Магистр
+                        .choice__prop Источник финансирования: 
+                            b Бюджетная основа
+                        .choice__prop Форма обучения: 
+                            b Заочная
+                        .choice__prop Образовательная программа: 
+                            b Сокращенная
+
+        // end choice__list
+
+        // begin choice__aside
+        .choice__aside
+            .choice__title Вы выбрали 5 направлений
+            .choice__chosen
+                .scrollbar
+                    ul
+                        each item in ['', '', '', '', '', '', '', '', '']
+                            li Юриспруденция Заочная Бюджетная основа
+                                i.icon_close
+
+            .choice__action
+                button.btn.btn_small Сохранить
+                button.btn.btn_clear.btn_small 
+                    i.icon_close
+                    | Сбросить
+
+
+        // end choice__aside
+
+
+    // end choice

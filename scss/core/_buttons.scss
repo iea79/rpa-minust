@@ -1,0 +1,131 @@
+// Style for button and pseudo button for input and link
+
+.btn {
+	color: $btn_default_text_color;
+	font-family: $main_font_family;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	padding: 15px 25px;
+	border: none;
+	outline: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
+	background-color: $btn_default_bg_color;
+	text-align: center;
+	max-width: 100%;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: 0.3s;
+	transition-property: background color border-color;
+
+	@media (min-width: 768px) {
+		font-size: 15px;
+		padding: 17px 25px;
+	}
+
+	&:hover {
+		background-color: $btn_default_bg_color_hover;
+		color: $btn_default_text_color;
+	}
+
+	&:active,
+	&:focus {
+		background-color: $btn_default_bg_color_active;
+		color: $btn_default_text_color;
+	}
+
+	&_small {
+		padding: 13px 25px;
+		font-size: 13px;
+	}
+
+	&_border {
+		font-size: 12px;
+		font-weight: 500;
+		padding: 13px 25px;
+		border: 1px solid #0BAE78;
+		background-color: $color_withe;
+		color: $main_color;
+
+		&:hover {
+			background: #0BAE78;
+		}
+
+		&:active,
+		&:focus {
+			border: 1px solid #0BAE78;
+			background-color: $color_withe;
+			color: $main_color;
+		}
+	}
+
+	&_contrast {
+		font-size: 12px;
+		font-weight: 500;
+		padding: 13px 25px;
+		border: 1px solid $color_withe;
+		background-color: transparent;
+		color: $color_withe;
+
+		&:hover {
+			border: 1px solid $color_withe;
+			background-color: $color_withe;
+			color: #0BAE78;
+		}
+
+		&:active,
+		&:focus {
+			border: 1px solid $color_withe;
+			background-color: transparent;
+			color: $color_withe;
+		}
+	}
+
+	&_clear {
+		font-size: 13px;
+		font-weight: 400;
+		padding: 13px 25px;
+		border: 1px solid $color_withe;
+		background-color: transparent;
+		color: #666A6D;
+
+		.icon_close {
+			color: #C4C4C4;
+			margin-right: 4px;
+			font-size: 10px;
+		}
+
+		&:hover {
+			border: 1px solid $color_withe;
+			background-color: $color_withe;
+			color: #0BAE78;
+		}
+
+		&:active,
+		&:focus {
+			border: 1px solid $color_withe;
+			background-color: transparent;
+			color: #666A6D;
+		}
+	}
+	// @each $status_el, $color_bg in $el_colors {
+	// 	&_#{$status_el} {
+	// 		background-color: $color_bg;
+	// 		border-color: $color_bg;
+	// 		color: $btn_contrast_text_color;
+	//
+	// 		&:hover {
+	// 			background-color: darken($color_bg, 7%);
+	// 			color: $btn_contrast_text_color;
+	// 		}
+	//
+	// 		&:active,
+	// 		&:focus {
+	// 			background-color: darken($color_bg, 10%);
+	// 			color: $btn_contrast_text_color;
+	// 		}
+	// 	}
+	// }
+}

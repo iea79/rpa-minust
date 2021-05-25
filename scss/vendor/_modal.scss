@@ -1,0 +1,123 @@
+// Modal / bootstrap ------------------------------------------
+
+.modal {
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+
+    &-open {
+        overflow: hidden;
+    }
+
+    .icon_close {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        text-decoration: none;
+        font-size: 10px;
+        color: $color_withe;
+        // background: image-url('close.svg') no-repeat center center;
+    }
+
+    &.fade .modal-dialog {
+        transform: translate(0, -25%);
+        transition: transform 0.3s ease-out;
+    }
+
+    &.in {
+        display: flex !important;
+
+        .modal-dialog {
+            transform: translate(0, 0);
+            position: relative;
+        }
+    }
+
+    &-dialog {
+        position: relative;
+        width: auto;
+        margin: auto;
+        max-width: 428px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    &-content {
+        position: relative;
+        background-color: #fff;
+        border: 0;
+        box-shadow: 0 45px 87px rgba(11, 43, 31, 0.07);
+        border-radius: 10px;
+        background-clip: padding-box;
+        outline: 0;
+        padding: 0;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    &-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1040;
+        background-color: #000;
+
+        &.fade {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        &.in {
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+    }
+
+    &-header {
+        padding: 15px;
+        min-height: 130px;
+        color: #666;
+        font-size: 18px;
+        background: url("../img/success-head.jpg") 0 0 no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 143.1%;
+        color: #FFFFFF;
+
+        &--error {
+            background-image: url("../img/error-head.jpg");
+        }
+    }
+
+    &-body {
+        position: relative;
+        padding: 29px 15px 20px;
+        font-size: 18px;
+        line-height: 143.1%;
+    }
+
+    &-footer {
+        margin-top: 15px;
+        padding: 0 20px 35px;
+
+        .btn {
+            width: 100%;
+            max-width: 194px;
+        }
+    }
+
+}

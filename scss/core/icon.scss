@@ -1,0 +1,118 @@
+$icomoon-font-family: "rpa" !default;
+$icomoon-font-path: "../fonts" !default;
+
+$icon_clip: "\e900";
+$icon_trash: "\e908";
+$icon_logout: "\e909";
+$icon_gear: "\e90a";
+$icon_caret: "\e90b";
+$icon_close: "\e90c";
+$icon_check: "\e90d";
+$icon_chat: "\e90e";
+$icon_doc: "\e90f";
+$icon_student: "\e910";
+$icon_cup: "\e911";
+$icon_user: "\e912";
+$icon_alert: "\e913";
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?6u1tv9") format('truetype'), url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?6u1tv9") format('woff'), url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?6u1tv9##{$icomoon-font-family}") format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon_"],
+[class*=" icon_"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_clip {
+    &:before {
+        content: $icon_clip;
+    }
+}
+
+.icon_trash {
+    &:before {
+        content: $icon_trash;
+    }
+}
+
+.icon_logout {
+    &:before {
+        content: $icon_logout;
+    }
+}
+
+.icon_gear {
+    &:before {
+        content: $icon_gear;
+    }
+}
+
+.icon_caret {
+    &:before {
+        content: $icon_caret;
+    }
+}
+
+.icon_close {
+    &:before {
+        content: $icon_close;
+    }
+}
+
+.icon_check {
+    &:before {
+        content: $icon_check;
+    }
+}
+
+.icon_chat {
+    &:before {
+        content: $icon_chat;
+    }
+}
+
+.icon_doc {
+    &:before {
+        content: $icon_doc;
+    }
+}
+
+.icon_student {
+    &:before {
+        content: $icon_student;
+    }
+}
+
+.icon_cup {
+    &:before {
+        content: $icon_cup;
+    }
+}
+
+.icon_user {
+    &:before {
+        content: $icon_user;
+    }
+}
+
+.icon_alert {
+    &:before {
+        content: $icon_alert;
+    }
+}

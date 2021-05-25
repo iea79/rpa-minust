@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/tooltipster.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.4"/>
+  </head>
+  <body>
+    <aside class="aside">
+      <div class="aside__head"><a class="logo" href="/"><img src="img/logo.svg" alt=""/><span class="logo__name">Всероссийский государственный университет юстиции</span></a></div>
+      <div class="aside__body">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link active" href="anketa.html"><i class="icon_user"> </i><span>Анкета</span></a></li>
+            <li class="menu__item"><a class="menu__link" href="achievements.html"><i class="icon_cup"> </i><span>Индивидуальные достижения, олимпиады, льготы</span></a></li>
+            <li class="menu__item"><a class="menu__link" href="choice.html"><i class="icon_student"> </i><span>Выбор направления подготовки</span></a></li>
+            <li class="menu__item"><a class="menu__link" href="contract.html"><i class="icon_doc"> </i><span>Договор</span></a></li>
+            <li class="menu__item"><a class="menu__link" href="feedback.html"><i class="icon_chat"> </i><span>Обратная связь</span></a></li>
+          </ul>
+        </nav>
+        <div class="aside__toggle"><i class="icon_caret"></i></div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <div class="header__content">
+          <h1 class="header__title">Анкета</h1>
+          <div class="header__group">
+            <div class="userId">Ваш ID в системе: <b>24 458</b></div>
+            <div class="lang">
+              <select>
+                <option value="RU">RU</option>
+                <option value="EN">EN</option>
+              </select>
+            </div>
+            <div class="user">
+              <div class="user__ava"><img src="img/ava.png" alt=""/></div>
+              <div class="user__name">Леонид Фундуков
+                <div class="user__drop"><a class="user__link" href="settings.html"><i class="icon_gear"> </i>Настройки</a><a class="user__link" href=""><i class="icon_logout"> </i>Выход</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main__content">
+        <!-- begin notification-->
+        <div class="notification"><i class="icon_alert"> </i>
+          <div class="notification__text">Просьба ознакомиться с <a href="">Руководством пользователя </a>и <a href="">Видеоинструкцией по работе с порталом </a>перед началом заполнения данных</div>
+          <div class="notification__action">
+            <button class="btn btn_contrast">Закрыть уведомление</button>
+          </div>
+        </div>
+        <!-- end notification-->
+        <!-- begin form-->
+        <div class="form">
+          <div class="form__toggle active"></div>
+          <div class="form__legend">Основные данные<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></div>
+          <div class="form__body open">
+            <div class="avatar">
+              <div class="avatar__img"><img src="img/ava-lg.png" alt=""/>
+                <div class="avatar__add"></div>
+              </div>
+              <div class="avatar__delete"><i class="icon_close"> </i>Удалить</div>
+            </div>
+            <div class="form__sub">Общая информация</div>
+            <div class="form__row">
+              <div class="form__item">
+                <label class="form__label">Фамилия *</label>
+                    <input class="form__field" type="text" placeholder="Введите вашу фамилию"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Имя *</label>
+                    <input class="form__field" type="text" placeholder="Введите ваше имя"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Отчество *</label>
+                    <input class="form__field invalid" type="text" placeholder="Введите ваше отчество"/>
+                    <label class="form__check">
+                      <input type="checkbox" checked=""/><span>Нет отчества</span>
+                    </label>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Гражданство *</label>
+                    <input class="form__field" type="text" placeholder="выберите страну"/>
+                    <label class="form__check">
+                      <input type="checkbox"/><span>Нет гражданства</span>
+                    </label>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Электронная почта *</label>
+                    <input class="form__field" type="text" placeholder="Введите ваш e-mail"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Номер телефона *</label>
+                    <input class="form__field" type="text" placeholder="+7 727 458 45 58"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Семейное положение *</label>
+                    <select class="form__select invalid" name="" data-placeholder="Семейное положение">
+                      <option value=""></option>
+                      <option value="Холост">Холост</option>
+                      <option value="Женат">Женат</option>
+                    </select>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Пол *</label>
+                    <label class="form__check">
+                      <input type="radio" name="gender" checked=""/><span>Мужской</span>
+                    </label>
+                    <label class="form__check">
+                      <input type="radio" name="gender"/><span>Женский</span>
+                    </label>
+              </div>
+            </div>
+            <div class="form__sub">Дополнительная информация</div>
+            <div class="form__row">
+              <div class="form__item form__item_semy">
+                <label class="form__label">Учебное заведение, которое вы закончили *</label>
+                    <select class="form__select" name="" data-placeholder="Выберите одно или несколько учебных заведений">
+                      <option value=""></option>
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                      <option value="Значение 5">Значение 5</option>
+                      <option value="Значение 6">Значение 6</option>
+                      <option value="Значение 7">Значение 7</option>
+                      <option value="Значение 8">Значение 8</option>
+                      <option value="Значение 9">Значение 9</option>
+                      <option value="Значение 10">Значение 10</option>
+                    </select>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__item">
+                <label class="form__label">СНИЛС *</label>
+                    <input class="form__field" type="text" placeholder="Введите номер СНИЛС"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Дата СНИЛС *</label>
+                    <input class="form__field" type="text" placeholder="Введите дату выдачи СНИЛС"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">ИИН *</label>
+                    <input class="form__field" type="text" placeholder="Введите ваш ИИН"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Способ подачи заявления *</label>
+                    <select class="form__select" name="" data-placeholder="выберите из доступных способов подачи">
+                      <option value=""></option>
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                      <option value="Значение 5">Значение 5</option>
+                      <option value="Значение 6">Значение 6</option>
+                      <option value="Значение 7">Значение 7</option>
+                      <option value="Значение 8">Значение 8</option>
+                      <option value="Значение 9">Значение 9</option>
+                      <option value="Значение 10">Значение 10</option>
+                    </select>
+              </div>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Сохранить изменения</button>
+              <div class="form__req">* обязательные поля</div>
+            </div>
+          </div>
+        </div>
+        <!-- end form-->
+        <!-- begin form-->
+        <div class="form">
+          <div class="form__toggle"></div>
+          <div class="form__legend">Паспортные данные абитуриента<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></div>
+          <div class="form__body">
+            <div class="form__sub">Данные документов</div>
+            <div class="form__row">
+              <div class="form__item">
+                <label class="form__label">Тип документа *</label>
+                    <select class="form__select" name="" data-placeholder="выберите тип документа">
+                      <option value=""></option>
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                      <option value="Значение 5">Значение 5</option>
+                      <option value="Значение 6">Значение 6</option>
+                      <option value="Значение 7">Значение 7</option>
+                      <option value="Значение 8">Значение 8</option>
+                      <option value="Значение 9">Значение 9</option>
+                      <option value="Значение 10">Значение 10</option>
+                    </select>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Серия *</label>
+                    <input class="form__field" type="text" placeholder="Введите серию"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Номер документа *</label>
+                    <input class="form__field" type="text" placeholder="Введите номер вашего документа"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Код подразделения</label>
+                    <input class="form__field" type="text" placeholder="введите код"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Когда выдан *</label>
+                    <input class="form__field" type="text" placeholder="Введите дату выдачи документа"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Кем выдан документ *</label>
+                    <input class="form__field" type="text" placeholder="Пример: министерство юстиции РФ"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Место рождения *</label>
+                    <input class="form__field" type="text" placeholder="введите ваше место рождения"/>
+              </div>
+            </div>
+            <div class="form__sub">Оригиналы документов</div>
+            <div class="form__row">
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Разворот с фотографией *</label>
+                    <label class="form__file" for="q1">
+                      <input type="file" id="q1"/>
+                      <input class="form__field" type="text" placeholder="укажите расположение документа"/><span class="btn btn_border">Обзор</span>
+                    </label>
+                <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Разворот с текущим местом регистрации *</label>
+                    <label class="form__file" for="q2">
+                      <input type="file" id="q2"/>
+                      <input class="form__field" type="text" placeholder="укажите расположение документа"/><span class="btn btn_border">Обзор</span>
+                    </label>
+                <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Страница сведений о ранее выданном паспорте *</label>
+                    <label class="form__file" for="q3">
+                      <input type="file" id="q3"/>
+                      <input class="form__field" type="text" placeholder="укажите расположение документа"/><span class="btn btn_border">Обзор</span>
+                    </label>
+                <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
+              </div>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Сохранить изменения</button>
+              <div class="form__req">* обязательные поля</div>
+            </div>
+          </div>
+        </div>
+        <!-- end form-->
+        <!-- begin form-->
+        <div class="form">
+          <div class="form__toggle"></div>
+          <div class="form__legend">Место регистрации и место проживания<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></div>
+          <div class="form__body">
+            <div class="form__sub">Адрес регистрации</div>
+            <div class="form__row">
+              <div class="form__item">
+                <label class="form__label">Страна *</label>
+                    <select class="form__select" name="" data-placeholder="нажмите для выбора страны">
+                      <option value=""></option>
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                      <option value="Значение 5">Значение 5</option>
+                      <option value="Значение 6">Значение 6</option>
+                      <option value="Значение 7">Значение 7</option>
+                      <option value="Значение 8">Значение 8</option>
+                      <option value="Значение 9">Значение 9</option>
+                      <option value="Значение 10">Значение 10</option>
+                    </select>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Населенный пункт *</label>
+                    <input class="form__field" type="text" placeholder="Введите название населенного пункта"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Улица</label>
+                    <input class="form__field" type="text" placeholder="Введите название улицы"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Дом *</label>
+                    <input class="form__field" type="text" placeholder="введите номер дома"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Корпус</label>
+                    <input class="form__field" type="text" placeholder="Введите номер корпуса"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Квартира</label>
+                    <input class="form__field" type="text" placeholder="введите номер квартиры"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Индекс</label>
+                    <input class="form__field" type="text" placeholder="введите номер почтового индекса"/>
+              </div>
+              <div class="form__item form__item_full form__item_skiny">
+                    <label class="form__check">
+                      <input type="checkbox"/><span>Адрес фактического проживания совпадает с адресом регистрации</span>
+                    </label>
+              </div>
+            </div>
+            <div class="form__sub">Адрес фактического проживания</div>
+            <div class="form__row">
+              <div class="form__item">
+                <label class="form__label">Страна *</label>
+                    <select class="form__select" name="" data-placeholder="нажмите для выбора страны">
+                      <option value=""></option>
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                      <option value="Значение 5">Значение 5</option>
+                      <option value="Значение 6">Значение 6</option>
+                      <option value="Значение 7">Значение 7</option>
+                      <option value="Значение 8">Значение 8</option>
+                      <option value="Значение 9">Значение 9</option>
+                      <option value="Значение 10">Значение 10</option>
+                    </select>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Населенный пункт *</label>
+                    <input class="form__field" type="text" placeholder="Введите название населенного пункта"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Улица</label>
+                    <input class="form__field" type="text" placeholder="Введите название улицы"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Дом *</label>
+                    <input class="form__field" type="text" placeholder="введите номер дома"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Корпус</label>
+                    <input class="form__field" type="text" placeholder="Введите номер корпуса"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Квартира</label>
+                    <input class="form__field" type="text" placeholder="введите номер квартиры"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Индекс</label>
+                    <input class="form__field" type="text" placeholder="введите номер почтового индекса"/>
+              </div>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Сохранить изменения</button>
+              <div class="form__req">* обязательные поля</div>
+            </div>
+          </div>
+        </div>
+        <!-- end form-->
+        <!-- begin form-->
+        <div class="form">
+          <div class="form__toggle"></div>
+          <div class="form__legend">Сведения об образовании<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></div>
+          <div class="form__body">
+            <div class="form__sub">Общие сведения об образовании</div>
+            <div class="form__row">
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Вид образования *</label>
+                    <select class="form__select" name="" data-placeholder="выберите вид образования">
+                      <option value=""></option>
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                      <option value="Значение 5">Значение 5</option>
+                      <option value="Значение 6">Значение 6</option>
+                      <option value="Значение 7">Значение 7</option>
+                      <option value="Значение 8">Значение 8</option>
+                      <option value="Значение 9">Значение 9</option>
+                      <option value="Значение 10">Значение 10</option>
+                    </select>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Наименование учебного заведения *</label>
+                    <input class="form__field" type="text" placeholder="Введите полное наименование учебного заведения"/>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Страна учебного заведения *</label>
+                    <select class="form__select" name="" data-placeholder="Выберите страну">
+                      <option value=""></option>
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                      <option value="Значение 5">Значение 5</option>
+                      <option value="Значение 6">Значение 6</option>
+                      <option value="Значение 7">Значение 7</option>
+                      <option value="Значение 8">Значение 8</option>
+                      <option value="Значение 9">Значение 9</option>
+                      <option value="Значение 10">Значение 10</option>
+                    </select>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Форма обучения *</label>
+                    <select class="form__select" name="" data-placeholder="Выберите форму обучения">
+                      <option value=""></option>
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                      <option value="Значение 5">Значение 5</option>
+                      <option value="Значение 6">Значение 6</option>
+                      <option value="Значение 7">Значение 7</option>
+                      <option value="Значение 8">Значение 8</option>
+                      <option value="Значение 9">Значение 9</option>
+                      <option value="Значение 10">Значение 10</option>
+                    </select>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Год окончания *</label>
+                    <input class="form__field" type="text" placeholder="Введите год окончания"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Изучаемый иностранный язык</label>
+                    <select class="form__select" name="" data-placeholder="Выберите изучаемый язык">
+                      <option value=""></option>
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                      <option value="Значение 5">Значение 5</option>
+                      <option value="Значение 6">Значение 6</option>
+                      <option value="Значение 7">Значение 7</option>
+                      <option value="Значение 8">Значение 8</option>
+                      <option value="Значение 9">Значение 9</option>
+                      <option value="Значение 10">Значение 10</option>
+                    </select>
+              </div>
+              <div class="form__item form__item_semy_lg">
+                <label class="form__label">Участие в олимпиадах и достижения </label>
+                    <textarea class="form__field" placeholder="Введите свои достижения, перечислите олимпиады"></textarea>
+              </div>
+            </div>
+            <div class="form__sub">Оригиналы документов</div>
+            <div class="form__row">
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Разворот обложки аттестата *</label>
+                    <label class="form__file" for="a1">
+                      <input type="file" id="a1"/>
+                      <input class="form__field" type="text" placeholder="укажите расположение документа"/><span class="btn btn_border">Обзор</span>
+                    </label>
+                <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Фото приложения *</label>
+                    <label class="form__file" for="a2">
+                      <input type="file" id="a2"/>
+                      <input class="form__field" type="text" placeholder="укажите расположение документа"/><span class="btn btn_border">Обзор</span>
+                    </label>
+                <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Фото разворота приложения *</label>
+                    <label class="form__file" for="a3">
+                      <input type="file" id="a3"/>
+                      <input class="form__field" type="text" placeholder="укажите расположение документа"/><span class="btn btn_border">Обзор</span>
+                    </label>
+                <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
+              </div>
+            </div>
+            <div class="form__add">
+              <div class="form__addIcon"></div>
+              <div class="form__addLabel">Добавить учебное заведение</div>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Сохранить изменения</button>
+              <div class="form__req">* обязательные поля</div>
+            </div>
+          </div>
+        </div>
+        <!-- end form-->
+        <!-- begin form-->
+        <div class="form">
+          <div class="form__toggle"></div>
+          <div class="form__legend">Дополнительные файлы<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></div>
+          <div class="form__body">
+            <div class="form__subtitle">Здесь Вы можете добавить иные документы по преимущественному поступлению</div>
+            <div class="form__row form__row_short">
+              <div class="form__item form__item_full">
+                <label class="form__label">Наименование документа *</label>
+                    <input class="form__field" type="text" placeholder="Введите наименование документа"/>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Номер документа</label>
+                    <input class="form__field" type="text" placeholder="введите номер документа"/>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Дата выдачи документа</label>
+                    <input class="form__field" type="text" placeholder="Введите дату выдачи"/>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Подтверждающий документ *</label>
+                    <label class="form__file" for="d1">
+                      <input type="file" id="d1"/>
+                      <input class="form__field" type="text" placeholder="укажите расположение документа"/><span class="btn btn_border">Обзор</span>
+                    </label>
+              </div>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Сохранить изменения</button>
+              <div class="form__req">* обязательные поля</div>
+            </div>
+          </div>
+          <!-- end form-->
+        </div>
+        <!-- begin form-->
+        <div class="form">
+          <div class="form__toggle"></div>
+          <div class="form__legend">Дополнительная информация<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></div>
+          <div class="form__body">
+            <div class="form__subtitle">Здесь Вы можете заполнить дополнительную информацию, которую нужно учесть при поступлении</div>
+            <div class="form__row">
+              <div class="form__item form__item_full">
+                <label class="form__check form__check_row">
+                  <input type="checkbox" checked=""/><span>Необходимость в общежитии во время учебы</span>
+                </label>
+                <label class="form__check form__check_row">
+                  <input type="checkbox" checked=""/><span>Нужны специальные условия при проведении вступительных испытаний </span>
+                </label>
+              </div>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Сохранить изменения</button>
+              <div class="form__req">* обязательные поля</div>
+            </div>
+          </div>
+          <!-- end form-->
+        </div>
+      </div>
+    </main>
+    <script src="js/jquery.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+    <script src="js/function.js?0.4"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+extends layout/layout.pug
+block variables
+    - pageName = "Главная"
+block content
+    ul
+        li
+            a(href="anketa.html") Анкета
+        li
+            a(href="achievements.html") Индивидуальные достижения, олимпиады
+        li
+            a(href="choice.html") Выбор направления подготовки
+        li
+            a(href="choice2.html") Выбор направления подготовки 2
+        li
+            a(href="contract.html") Договор
+        li
+            a(href="feedback.html") Обратная связь
+        li
+            a(href="settings.html") Настройки
+        br
+        br
+        br
+        .form__row
+            .form__item
+                // Button trigger modal modal-save
+                button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-save") Все изменения сохранены
+            .form__item
+                // Button trigger modal modal-save-error
+                button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-save-error") Ваши данные не были сохранены
+            .form__item
+                // Button trigger modal modal-save-pass
+                button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-save-pass") Ваш пароль успешно изменен!
+            .form__item
+                // Button trigger modal modal-save-mail
+                button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-save-mail") Ваша почта успешно изменена!
+            .form__item
+                // Button trigger modal modal-error-mail
+                button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-error-mail") Ваша почта не была изменена
+
+        // Begin Modal modal-save
+        .modal.fade#modal-save
+            .modal-dialog
+                .modal-content
+                    a(href="#" class="icon_close" data-dismiss="modal")
+                    .modal-header.modal-header--success
+                        .modal-title Успех!
+                    .modal-body Все изменения сохранены
+                    .modal-footer
+                        button.btn(data-dismiss="modal") Понятно
+        // End modal modal-save
+
+        // Begin Modal modal-save-error
+        .modal.fade#modal-save-error
+            .modal-dialog
+                .modal-content
+                    a(href="#" class="icon_close" data-dismiss="modal")
+                    .modal-header.modal-header--error
+                        .modal-title Ошибка!!
+                    .modal-body Ваши данные не были сохранены
+                    .modal-footer
+                        button.btn(data-dismiss="modal") Понятно
+        // End modal modal-save-error
+
+        // Begin Modal modal-save-pass
+        .modal.fade#modal-save-pass
+            .modal-dialog
+                .modal-content
+                    a(href="#" class="icon_close" data-dismiss="modal")
+                    .modal-header.modal-header--success
+                        .modal-title
+                    .modal-body Ваш пароль успешно изменен!
+                    .modal-footer
+                        button.btn(data-dismiss="modal") Понятно
+        // End modal modal-save-pass
+
+        // Begin Modal modal-save-mail
+        .modal.fade#modal-save-mail
+            .modal-dialog
+                .modal-content
+                    a(href="#" class="icon_close" data-dismiss="modal")
+                    .modal-header.modal-header--success
+                        .modal-title
+                    .modal-body Ваша почта успешно изменена!
+                    .modal-footer
+                        button.btn(data-dismiss="modal") Понятно
+        // End modal modal-save-mail
+
+        // Begin Modal modal-error-mail
+        .modal.fade#modal-error-mail
+            .modal-dialog
+                .modal-content
+                    a(href="#" class="icon_close" data-dismiss="modal")
+                    .modal-header.modal-header--error
+                        .modal-title
+                    .modal-body Ваша почта не была изменена
+                    .modal-footer
+                        button.btn(data-dismiss="modal") Понятно
+        // End modal modal-error-mail

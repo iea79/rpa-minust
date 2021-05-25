@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/tooltipster.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.4"/>
+  </head>
+  <body>
+    <aside class="aside">
+      <div class="aside__head"><a class="logo" href="/"><img src="img/logo.svg" alt=""/><span class="logo__name">Всероссийский государственный университет юстиции</span></a></div>
+      <div class="aside__body">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="anketa.html"><i class="icon_user"> </i><span>Анкета</span></a></li>
+            <li class="menu__item"><a class="menu__link" href="achievements.html"><i class="icon_cup"> </i><span>Индивидуальные достижения, олимпиады, льготы</span></a></li>
+            <li class="menu__item"><a class="menu__link" href="choice.html"><i class="icon_student"> </i><span>Выбор направления подготовки</span></a></li>
+            <li class="menu__item"><a class="menu__link" href="contract.html"><i class="icon_doc"> </i><span>Договор</span></a></li>
+            <li class="menu__item"><a class="menu__link" href="feedback.html"><i class="icon_chat"> </i><span>Обратная связь</span></a></li>
+          </ul>
+        </nav>
+        <div class="aside__toggle"><i class="icon_caret"></i></div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <div class="header__content">
+          <h1 class="header__title">Настройки</h1>
+          <div class="header__group">
+            <div class="userId">Ваш ID в системе: <b>24 458</b></div>
+            <div class="lang">
+              <select>
+                <option value="RU">RU</option>
+                <option value="EN">EN</option>
+              </select>
+            </div>
+            <div class="user">
+              <div class="user__ava"><img src="img/ava.png" alt=""/></div>
+              <div class="user__name">Леонид Фундуков
+                <div class="user__drop"><a class="user__link" href="settings.html"><i class="icon_gear"> </i>Настройки</a><a class="user__link" href=""><i class="icon_logout"> </i>Выход</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main__content">
+        <div class="form">
+          <div class="form__sub">Смена пароля</div>
+          <div class="form__row">
+            <div class="form__item">
+              <label class="form__label">Старый пароль</label>
+                  <input class="form__field" type="text" placeholder="введите старый пароль"/>
+            </div>
+            <div class="form__item">
+              <label class="form__label">Новый пароль</label>
+                  <input class="form__field" type="text" placeholder="Введите новый пароль"/>
+            </div>
+            <div class="form__item">
+              <label class="form__label">Повторите новый пароль</label>
+                  <input class="form__field" type="text" placeholder="введите новый пароль повторно"/>
+            </div>
+          </div>
+          <div class="form__sub">Смена электронной почты</div>
+          <div class="form__row">
+            <div class="form__item">
+              <label class="form__label">Введите новую электронную почту</label>
+                  <input class="form__field" type="text" placeholder="введите новый e-mail"/>
+            </div>
+          </div>
+          <div class="form__action">
+            <button class="btn">Сохранить изменения</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/jquery.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+    <script src="js/function.js?0.4"></script>
+  </body>
+</html>

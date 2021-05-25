@@ -1,0 +1,29 @@
+aside.aside
+    .aside__head
+        a.logo(href="/")
+            img(src="img/logo.svg", alt="")
+            span.logo__name Всероссийский государственный университет юстиции
+
+    .aside__body
+        nav.menu
+            ul.menu__list
+                -
+                    nav = [
+                        {name: 'Анкета', icon: 'icon_user', href: 'anketa.html'}, 
+                        {name: 'Индивидуальные достижения, олимпиады, льготы', icon: 'icon_cup', href: 'achievements.html'}, 
+                        {name: 'Выбор направления подготовки', icon: 'icon_student', href: 'choice.html'}, 
+                        {name: 'Договор', icon: 'icon_doc', href: 'contract.html'}, 
+                        {name: 'Обратная связь', icon: 'icon_chat', href: 'feedback.html'}
+                    ]
+
+                each item, i in nav
+                    - active = '';
+                    if i == pageNum
+                        - active = 'active';
+                    li.menu__item
+                        a.menu__link(href=item.href class=active)
+                            i(class=item.icon) 
+                            span #{item.name}
+
+        .aside__toggle
+            i.icon_caret

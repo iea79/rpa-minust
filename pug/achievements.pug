@@ -1,0 +1,99 @@
+extends layout/layout.pug
+block variables
+    - pageNum = 1;
+    - pageName = "Индивидуальные достижения, олимпиады";
+block content
+    // begin notification
+    .notification
+        i.icon_alert 
+        .notification__text Просьба ознакомиться с 
+            a(href="") Руководством пользователя 
+            | и 
+            a(href="") Видеоинструкцией по работе с порталом 
+            | перед началом заполнения данных
+
+        .notification__action
+            button.btn.btn_contrast Закрыть уведомление
+
+    // end notification
+
+    .table
+        .table__head
+            .table__row
+                .table__col Наименование документа
+                .table__col За что получен (достижение)
+                .table__col Тип документа
+                .table__col Реквизиты
+                .table__col Количество
+                .table__col Дополнительная информация
+                .table__col Документ
+        .table__body
+            .table__row
+                .table__col.table__col_name Благодарность за участие в XVI зимней спартакиаде школьников
+                .table__col
+                    .table__label За что получен (достижение)
+                    | 1 место в общем зачете
+                .table__col
+                    .table__label Тип документа
+                    | Сертификат
+                .table__col.table__col_border
+                    .table__label Реквизиты
+                    | ИИН: 123 345 546
+                .table__col
+                    .table__label Количество
+                    | 12
+                .table__col
+                    .table__label Дополнительная информация
+                    | Ежегодный участник и призер спартакиад
+                .table__col
+                    .table__label Документ
+                    .table__icons
+                        a.icon_pdf(href="")
+                        a.icon_trash(href="")
+            .table__row
+                .table__col.table__col_name Благодарность за участие в XV зимней спартакиаде школьников
+                .table__col
+                    .table__label За что получен (достижение)
+                    | 1 место в общем зачете
+                .table__col
+                    .table__label Тип документа
+                    | Сертификат
+                .table__col.table__col_border
+                    .table__label Реквизиты
+                    | ИИН: 123 345 546
+                .table__col
+                    .table__label Количество
+                    | 8
+                .table__col
+                    .table__label Дополнительная информация
+                    | Ежегодный участник и призер спартакиад
+                .table__col 
+                    .table__label Документ
+                    .table__icons
+                        a.icon_pdf(href="")
+                        a.icon_trash(href="")
+            .table__row
+                .table__col.table__col_name Благодарность за участие в XV зимней спартакиаде школьников
+                .table__col
+                    .table__label За что получен (достижение)
+                    | 2 место в общем зачете
+                .table__col
+                    .table__label Тип документа
+                    | Сертификат
+                .table__col.table__col_border
+                    .table__label Реквизиты
+                    | ИИН: 123 345 546
+                .table__col
+                    .table__label Количество
+                    | 5
+                .table__col
+                    .table__label Дополнительная информация
+                    | Ежегодный участник и призер спартакиад
+                .table__col 
+                    .table__label Документ
+                    .table__icons
+                        a.icon_pdf(href="")
+                        a.icon_trash(href="")
+
+    .addBox
+        button.btn Добавить документ

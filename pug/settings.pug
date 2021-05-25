@@ -1,0 +1,28 @@
+extends layout/layout.pug
+block variables
+    - pageNum;
+    - pageName = "Настройки";
+block content
+    .form
+        .form__sub Смена пароля
+
+        .form__row
+            .form__item
+                label.form__label Старый пароль
+                +input('введите старый пароль')
+            .form__item
+                label.form__label Новый пароль
+                +input('Введите новый пароль')
+            .form__item
+                label.form__label Повторите новый пароль
+                +input('введите новый пароль повторно')
+
+        .form__sub Смена электронной почты
+
+        .form__row
+            .form__item
+                label.form__label Введите новую электронную почту
+                +input('введите новый e-mail')
+
+        .form__action
+            button.btn Сохранить изменения

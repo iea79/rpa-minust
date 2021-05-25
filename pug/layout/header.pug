@@ -1,0 +1,21 @@
+header.header
+    .header__content
+        h1.header__title=pageName
+        .header__group
+            .userId Ваш ID в системе: 
+                b 24 458
+            .lang
+                select
+                    option(value="RU") RU
+                    option(value="EN") EN
+            .user
+                .user__ava
+                    img(src="img/ava.png", alt="")
+                .user__name Леонид Фундуков
+                    .user__drop
+                        a.user__link(href="settings.html")
+                            i.icon_gear 
+                            | Настройки
+                        a.user__link(href="")
+                            i.icon_logout 
+                            | Выход

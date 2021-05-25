@@ -1,0 +1,47 @@
+extends layout/layout.pug
+block variables
+    - pageNum = 4;
+    - pageName = "Обратная связь";
+block content
+    // begin chat
+    .chat
+        .chat__head Чат с администрацией
+        .chat__content
+            #chat-scroll-container
+                .chat__body.scrollbar
+                    .chat__row
+                        .chat__answer
+                            .chat__ava
+                                img(src="img/logo-dark.png", alt="")
+                            .chat__wrap
+                                .chat__date Администрация, 21 апреля в 11:12
+                                .chat__text Хорошо, мы постараемся с этим разобраться
+                    .chat__row
+                        .chat__answer
+                            .chat__ava
+                                img(src="img/logo-dark.png", alt="")
+                            .chat__wrap
+                                .chat__date Администрация, 21 апреля в 11:12
+                                .chat__text Хорошо, мы постараемся с этим разобраться
+                    .chat__row
+                        .chat__question 
+                            .chat__date Вы, в 12:15
+                            .chat__quest День добрый! Хотел сказать большое спасибо за разработанное приложение очень удобно оказалось с ним взаимодействовать. Если честно, я просто в восторге от работы с этим приложением.
+                    .chat__row
+                        .chat__answer
+                            .chat__ava
+                                img(src="img/logo-dark.png", alt="")
+                            .chat__wrap
+                                .chat__date Администрация, в 16:45
+                                .chat__text Большое спасибо за ваш отзыв!
+            .chat__footer
+                .chat__fields
+                    input.chat__field.form__field(type="text" placeholder="Напишите ваш комментарий")
+                    label.chat__file
+                        input(type="file")
+                        i.icon_clip
+                .chat__submit
+                    button.btn(type="button") Отправить
+
+
+    // end chat
