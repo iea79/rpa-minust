@@ -23,8 +23,27 @@
 		}
 	}
 
-	&__label {}
+	&__label {
+		.icon_alert {
+			color: #0BAE78;
+			margin-left: 8px;
+			font-size: 14px;
+			cursor: pointer;
+		}
+	}
+
+	&__field:empty {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		&:before {
+			content: attr(data-placeholder);
+			color: $input_placeholder_color;
+		}
+	}
 }
+
 // Input text and textarea ================================================
 .form__field,
 .form__select,

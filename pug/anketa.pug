@@ -21,12 +21,37 @@ block content
     // begin form
     .form
         .form__toggle.active
-        .form__legend Основные данные
+        .form__legend Базовые данные для поступления
             i.icon_alert(class="tooltip" title=tooltip)
 
         .form__body.open
+            .form__row
+                .form__item.form__item_tripple
+                    label.form__label Гражданство * 
+                        i.icon_alert(class="tooltip" title=tooltip)
+                    +select("выберите страну")
+                    +checkbox("Нет гражданства")
+                .form__item.form__item_semy_lg
+                    label.form__label Выберите одно или несколько мест обучения *
+                        i.icon_alert(class="tooltip" title=tooltip)
+                    +select("Выберите места поступления", ['МГУ', 'Академия экономики и права', 'Техникум связи', 'Колледж инновации и внешней политики им. Горбачева',  'Аграрный техникум', 'Экономический университет имени Баумана'], true, true)
+                .form__item.form__item_semy_lg
+                    label.form__label Выберите одно или несколько сценариев поступления *
+                        i.icon_alert(class="tooltip" title=tooltip)
+                    +select("выберите сценарии поступления", null, true, true)
+
+            .form__action
+                button.btn(type="submit") Сохранить изменения
+
+    .form
+        .form__toggle
+        .form__legend Основные данные
+            i.icon_alert(class="tooltip" title=tooltip)
+
+        .form__body
             .avatar
-                .avatar__img
+                // в data-empty текст для пустого блока c учетом мультиязычности
+                .avatar__img(data-empty="Добавьте фотографию")
                     img(src="img/ava-lg.png", alt="")
                     .avatar__add
                 .avatar__delete
@@ -278,6 +303,20 @@ block content
             .form__action
                 button.btn(type="submit") Сохранить изменения
                 .form__req * обязательные поля
+
+    // end form
+
+    // begin form
+    .form
+        .form__toggle
+        .form__legend Результаты ЕГЭ
+            i.icon_alert(class="tooltip" title=tooltip)
+
+        .form__body
+            .form__row
+                .form__item
+                    +checkbox("Не сдавал ЕГЭ")
+            .form__row
 
     // end form
 

@@ -1,7 +1,8 @@
 $icomoon-font-family: "rpa" !default;
 $icomoon-font-path: "../fonts" !default;
 
-$icon_clip: "\e900";
+$icon_location: "\e900";
+$icon_clip: "\e901";
 $icon_trash: "\e908";
 $icon_logout: "\e909";
 $icon_gear: "\e90a";
@@ -37,6 +38,12 @@ $icon_alert: "\e913";
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_location {
+    &:before {
+        content: $icon_location;
+    }
 }
 
 .icon_clip {

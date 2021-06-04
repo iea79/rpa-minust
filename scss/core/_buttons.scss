@@ -110,6 +110,11 @@
 			color: #666A6D;
 		}
 	}
+
+	&_muted {
+		background: #EDF5FE;
+		color: #0BAE78;
+	}
 	// @each $status_el, $color_bg in $el_colors {
 	// 	&_#{$status_el} {
 	// 		background-color: $color_bg;

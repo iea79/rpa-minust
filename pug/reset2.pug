@@ -1,0 +1,18 @@
+extends layout2/layout.pug
+block content
+    .centerBox
+        .reset
+            .reset__title Сброс пароля
+            .form__group
+                a.btn.btn_small.btn_muted(href="reset.html") Сброс по e-mail
+                a.btn.btn_small(href="reset2.html") Сброс по номеру телефону
+
+            .reset__sub Введите номер телефона для получения дальнейших инструкций.
+
+            .reset__form
+                .reset__field
+                    +input("Введите ваш номер телефона")
+                .reset__btn
+                    button.btn(type="submit") Сбросить пароль
+            .reset__link
+                a(href="authorization.html") Ввести логин и пароль

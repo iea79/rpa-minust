@@ -1,0 +1,36 @@
+extends layout2/layout.pug
+block content
+    .container_center
+        h1.pageTitle Регистрация
+
+        .login
+            .login__form.login__form_lg
+                .form__label Введите данные для регистрации
+                .form__row
+                    .form__item.form__item_semy
+                        +input("Фамилия *")
+                    .form__item.form__item_semy
+                        +input("Имя *")
+                    .form__item.form__item_semy
+                        +input("Отчество")
+                    .form__item.form__item_semy
+                        +input("Дата рождения *")
+                    .form__item.form__item_semy
+                        +input("E-mail *")
+                    .form__item.form__item_semy
+                        +input("Номер телефона *")
+                    .form__item.form__item_semy
+                        +input("Пароль *")
+                    .form__item.form__item_semy
+                        +input("Повторите пароль *")
+                    .form__item.form__item_semy
+                        button.btn(type="submit") Регистрация
+                        .login__links
+                            div Уже есть аккаунт? 
+                                a(href="authorization.html") Ввести логин и пароль
+                    .form__item.form__item_semy
+                        +checkbox("Согласие на обработку персональных данных, с <a href=''>политикой конфендициальности ознакомлен</a>")
+
+            .login__content
+                .login__img
+                    img(src="img/reg.jpg", alt="")

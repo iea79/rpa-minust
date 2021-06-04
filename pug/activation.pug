@@ -1,0 +1,17 @@
+extends layout2/layout.pug
+block content
+    .centerBox
+        .reset
+            .reset__title Активация телефона
+
+            .reset__sub На номер телефона указанный при регистрации будет выслан одноразовый пароль
+
+            .reset__form
+                .reset__field
+                    +input("Введите вашу электронную почту")
+                .reset__btn
+                    button.btn(type="submit") Сбросить пароль
+            .reset__link
+                a(href="index.html") Вернуться на Главную
+                a(href="") Сменить номер телефона
+                a(href="") Удалить аккаунт

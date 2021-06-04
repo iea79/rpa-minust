@@ -4,13 +4,17 @@ body {
 	display: flex;
 	align-items: flex-start;
 	position: relative;
-	// flex-direction: column;
 	// font-size: calc(.034 * 100vw + 0px);
 	font-size: 12px;
 	height: auto;
 	min-height: 100%;
 	// color: $color_withe;
 	background: #F3F9FF;
+
+	&.loginPage {
+		align-items: stretch;
+		flex-direction: column;
+	}
 
 	// background-color: #101010;
 
@@ -62,11 +66,27 @@ a {
 			padding: 0 36px 50px 50px;
 		}
 	}
+
+	.loginPage & {
+		padding: 20px 0;
+
+		@media (min-width: 768px) {
+			padding: 60px 0;
+			display: flex;
+
+			&__content {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
 }
 
 .container_center {
 	max-width: $container_width;
-	padding: 0 1em;
+	padding: 0;
 	margin-left: auto;
 	margin-right: auto;
 }
