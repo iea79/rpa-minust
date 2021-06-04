@@ -82,8 +82,7 @@
               </div>
               <div class="form__item form__item_semy_lg">
                 <label class="form__label">Выберите одно или несколько мест обучения *<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></label>
-                    <select class="form__select" name="" data-placeholder="Выберите места поступления" multyple="multyple">
-                      <option value=""></option>
+                    <select class="form__select" name="" data-placeholder="Выберите места поступления" multiple="multiple">
                       <option value="МГУ">МГУ</option>
                       <option value="Академия экономики и права">Академия экономики и права</option>
                       <option value="Техникум связи">Техникум связи</option>
@@ -94,8 +93,7 @@
               </div>
               <div class="form__item form__item_semy_lg">
                 <label class="form__label">Выберите одно или несколько сценариев поступления *<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></label>
-                    <select class="form__select" name="" data-placeholder="выберите сценарии поступления" multyple="multyple">
-                      <option value=""></option>
+                    <select class="form__select" name="" data-placeholder="выберите сценарии поступления" multiple="multiple">
                       <option value="Значение 1">Значение 1</option>
                       <option value="Значение 2">Значение 2</option>
                       <option value="Значение 3">Значение 3</option>
@@ -233,9 +231,9 @@
         <!-- end form-->
         <!-- begin form-->
         <div class="form">
-          <div class="form__toggle"></div>
+          <div class="form__toggle active"></div>
           <div class="form__legend">Паспортные данные абитуриента<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></div>
-          <div class="form__body">
+          <div class="form__body open">
             <div class="form__sub">Данные документов</div>
             <div class="form__row">
               <div class="form__item">
@@ -284,6 +282,7 @@
               <div class="form__item form__item_tripple">
                 <label class="form__label">Разворот с фотографией *</label>
                     <label class="form__file" for="q1">
+                      <input class="file__list" type="hidden"/>
                       <input type="file" id="q1" multiple=""/><span class="form__field" data-placeholder="укажите расположение документа"></span><span class="btn btn_border">Обзор</span>
                     </label>
                 <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
@@ -291,6 +290,7 @@
               <div class="form__item form__item_tripple">
                 <label class="form__label">Разворот с текущим местом регистрации *</label>
                     <label class="form__file" for="q2">
+                      <input class="file__list" type="hidden"/>
                       <input type="file" id="q2" multiple=""/><span class="form__field" data-placeholder="укажите расположение документа"></span><span class="btn btn_border">Обзор</span>
                     </label>
                 <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
@@ -298,9 +298,43 @@
               <div class="form__item form__item_tripple">
                 <label class="form__label">Страница сведений о ранее выданном паспорте *</label>
                     <label class="form__file" for="q3">
+                      <input class="file__list" type="hidden"/>
                       <input type="file" id="q3" multiple=""/><span class="form__field" data-placeholder="укажите расположение документа"></span><span class="btn btn_border">Обзор</span>
                     </label>
                 <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
+              </div>
+            </div>
+            <div class="form__sub">Оригиналы документов (загружены)</div>
+            <div class="form__row">
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Разворот с фотографией *</label>
+                <div class="form__file">
+                  <div class="file">
+                    <div class="file__img"><img src="img/pdf.jpg" alt=""/></div>
+                    <div class="file__name">Разворот.pdf</div>
+                    <div class="file__remove icon_trash">                       </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Разворот с текущим местом регистрации *</label>
+                <div class="form__file">
+                  <div class="file">
+                    <div class="file__img"><img src="img/pdf.jpg" alt=""/></div>
+                    <div class="file__name">Регистрация.pdf</div>
+                    <div class="file__remove icon_trash">                       </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__item form__item_tripple">
+                <label class="form__label">Страница сведений о ранее выданном паспорте *</label>
+                <div class="form__file">
+                  <div class="file">
+                    <div class="file__img"><img src="img/pdf.jpg" alt=""/></div>
+                    <div class="file__name">Старый пасспорт... .pdf</div>
+                    <div class="file__remove icon_trash">                       </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="form__action">
@@ -502,6 +536,7 @@
               <div class="form__item form__item_tripple">
                 <label class="form__label">Разворот обложки аттестата *</label>
                     <label class="form__file" for="a1">
+                      <input class="file__list" type="hidden"/>
                       <input type="file" id="a1" multiple=""/><span class="form__field" data-placeholder="укажите расположение документа"></span><span class="btn btn_border">Обзор</span>
                     </label>
                 <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
@@ -509,6 +544,7 @@
               <div class="form__item form__item_tripple">
                 <label class="form__label">Фото приложения *</label>
                     <label class="form__file" for="a2">
+                      <input class="file__list" type="hidden"/>
                       <input type="file" id="a2" multiple=""/><span class="form__field" data-placeholder="укажите расположение документа"></span><span class="btn btn_border">Обзор</span>
                     </label>
                 <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
@@ -516,6 +552,7 @@
               <div class="form__item form__item_tripple">
                 <label class="form__label">Фото разворота приложения *</label>
                     <label class="form__file" for="a3">
+                      <input class="file__list" type="hidden"/>
                       <input type="file" id="a3" multiple=""/><span class="form__field" data-placeholder="укажите расположение документа"></span><span class="btn btn_border">Обзор</span>
                     </label>
                 <div class="form__info"> <a href="">Здесь </a>вы можете посмотреть образец</div>
@@ -570,6 +607,7 @@
               <div class="form__item form__item_tripple">
                 <label class="form__label">Подтверждающий документ *</label>
                     <label class="form__file" for="d1">
+                      <input class="file__list" type="hidden"/>
                       <input type="file" id="d1" multiple=""/><span class="form__field" data-placeholder="укажите расположение документа"></span><span class="btn btn_border">Обзор</span>
                     </label>
               </div>

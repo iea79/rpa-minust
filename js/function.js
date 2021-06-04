@@ -43,7 +43,7 @@ $(document).ready(function() {
 
     $('.form__select').select2({
         placeholder: $(this).data('placeholder'),
-        allowClear: true
+        // allowClear: true
     });
 
     $('.lang select').select2();
@@ -57,27 +57,22 @@ $(document).ready(function() {
         railoffset: "10px",
     };
 
-    $('.form__select').on('select2:open', () => {
+    $('.form__select').on('select2:open', function() {
         let drop = $('.select2-container--open').last().find('.select2-results__options');
+        if ($(this).attr('multiple')) {
+            drop.addClass('multiple');
+        }
         drop.niceScroll(scrollOptions);
     });
     $('.lang select').on('select2:open', () => {
         $('.select2-container--open').last().addClass('lang__drop');
     });
+
     $('.tooltip').tooltipster({
         side: ['right', 'bottom', 'left'],
         maxWidth: 331,
         arrow: false,
-        // trigger: 'custom',
         contentAsHTML: true,
-        // triggerOpen: {
-        //     // mouseenter: true
-        //     click: true
-        // },
-        // triggerClose: {
-        //     click: true,
-        //     scroll: true
-        // },
     });
 
     $('.scrollbar').niceScroll(scrollOptions);
@@ -231,144 +226,70 @@ function uploadYoutubeVideo() {
 
         });
     }
-};
+}
+
+function renderUploadedFile() {
+    const form = document.querySelectorAll('.form__file');
 
 
-// Деление чисел на разряды Например из строки 10000 получаем 10 000
-// Использование: thousandSeparator(1000) или используем переменную.
-// function thousandSeparator(str) {
-//     var parts = (str + '').split('.'),
-//         main = parts[0],
-//         len = main.length,
-//         output = '',
-//         i = len - 1;
+    form.forEach(item => {
+        const input = item.querySelector('[type="file"]'),
+              preview = item.querySelector('.form__field');
+        input.addEventListener('input', function() {
+            updateImageDisplay(preview, input);
+        });
 
-//     while(i >= 0) {
-//         output = main.charAt(i) + output;
-//         if ((len - i) % 3 === 0 && i > 0) {
-//             output = ' ' + output;
-//         }
-//         --i;
-//     }
+        item.addEventListener('click', (e) => {
+            if (e.target.classList.contains('file__del')) {
+                e.preventDefault();
+                const input = item.querySelector('[type="file"]'),
+                      preview = item.querySelector('.form__field'),
+                      fileListArr = Array.from(input.files);
 
-//     if (parts.length > 1) {
-//         output += '.' + parts[1];
-//     }
-//     return output;
-// };
+                fileListArr.splice(e.target.dataset.index, 1);
 
+                e.target.closest('li').remove();
 
-// Хак для яндекс карт втавленных через iframe
-// Страуктура:
-//<div class="map__wrap" id="map-wrap">
-//  <iframe style="pointer-events: none;" src="https://yandex.ru/map-widget/v1/-/CBqXzGXSOB" width="1083" height="707" frameborder="0" allowfullscreen="true"></iframe>
-//</div>
-// Обязательное свойство в style которое и переключет скрипт
-// document.addEventListener('click', function(e) {
-//     var map = document.querySelector('#map-wrap iframe')
-//     if(e.target.id === 'map-wrap') {
-//         map.style.pointerEvents = 'all'
-//     } else {
-//         map.style.pointerEvents = 'none'
-//     }
-// })
-
-// Простая проверка форм на заполненность и отправка аяксом
-// function formSubmit() {
-//     $("[type=submit]").on('click', function (e){
-//         e.preventDefault();
-//         var form = $(this).closest('.form');
-//         var url = form.attr('action');
-//         var form_data = form.serialize();
-//         var field = form.find('[required]');
-//         // console.log(form_data);
-
-//         empty = 0;
-
-//         field.each(function() {
-//             if ($(this).val() == "") {
-//                 $(this).addClass('invalid');
-//                 // return false;
-//                 empty++;
-//             } else {
-//                 $(this).removeClass('invalid');
-//                 $(this).addClass('valid');
-//             }
-//         });
-
-//         // console.log(empty);
-
-//         if (empty > 0) {
-//             return false;
-//         } else {
-//             $.ajax({
-//                 url: url,
-//                 type: "POST",
-//                 dataType: "html",
-//                 data: form_data,
-//                 success: function (response) {
-//                     // $('#success').modal('show');
-//                     // console.log('success');
-//                     console.log(response);
-//                     // console.log(data);
-//                     // document.location.href = "success.html";
-//                 },
-//                 error: function (response) {
-//                     // $('#success').modal('show');
-//                     // console.log('error');
-//                     console.log(response);
-//                 }
-//             });
-//         }
-
-//     });
-
-//     $('[required]').on('blur', function() {
-//         if ($(this).val() != '') {
-//             $(this).removeClass('invalid');
-//         }
-//     });
-
-//     $('.form__privacy input').on('change', function(event) {
-//         event.preventDefault();
-//         var btn = $(this).closest('.form').find('.btn');
-//         if ($(this).prop('checked')) {
-//             btn.removeAttr('disabled');
-//             // console.log('checked');
-//         } else {
-//             btn.attr('disabled', true);
-//         }
-//     });
-// }
+                if (item.querySelectorAll('li').length < 1) {
+                    preview.removeChild(preview.firstChild);
+                }
+            }
+        });
+    });
 
 
-// Проверка на возможность ввода только русских букв, цифр, тире и пробелов
-// $('#u_l_name').on('keypress keyup', function () {
-//     var that = this;
-//
-//     setTimeout(function () {
-//         if (that.value.match(/[ -]/) && that.value.length == 1) {
-//             that.value = '';
-//         }
-//
-//         if (that.value.match(/-+/g)) {
-//             that.value = that.value.replace(/-+/g, '-');
-//         }
-//
-//         if (that.value.match(/ +/g)) {
-//             that.value = that.value.replace(/ +/g, ' ');
-//         }
-//
-//         var res = /[^а-яА-Я -]/g.exec(that.value);
-//
-//         if (res) {
-//             removeErrorMsg('#u_l_name');
-//             $('#u_l_name').after('<div class="j-required-error b-check__errors">Измените язык ввода на русский</div>');
-//         }
-//         else {
-//             removeErrorMsg('#u_l_name');
-//         }
-//
-//         that.value = that.value.replace(res, '');
-//     }, 0);
-// });
+    function updateImageDisplay(preview, input) {
+        console.log('change');
+        const inpList = preview.closest('.form__file').querySelector('.file__list');
+        while(preview.firstChild) {
+            preview.removeChild(preview.firstChild);
+        }
+
+        const curFiles = input.files;
+
+        if(curFiles.length > 0) {
+            const list = document.createElement('ul');
+            preview.appendChild(list);
+            let i = 0;
+
+            for(const file of curFiles) {
+                const listItem = document.createElement('li');
+                const para = document.createElement('span');
+                const del = document.createElement('span');
+                let fileName = file.name;
+                if (file.name.length > 9) {
+                    fileName = `...${file.name.substr(file.name.length - 6)}`;
+                }
+                del.classList.add('file__del');
+                del.dataset.index = i;
+                para.textContent = fileName;
+                listItem.appendChild(para);
+                listItem.appendChild(del);
+                list.appendChild(listItem);
+                i++;
+            }
+        }
+    }
+}
+
+renderUploadedFile();

@@ -118,11 +118,11 @@ block content
 
     // begin form
     .form
-        .form__toggle
+        .form__toggle.active
         .form__legend Паспортные данные абитуриента
             i.icon_alert(class="tooltip" title=tooltip)
 
-        .form__body
+        .form__body.open
 
             .form__sub Данные документов
 
@@ -170,6 +170,35 @@ block content
                     .form__info 
                         a(href="") Здесь 
                         | вы можете посмотреть образец
+
+            .form__sub Оригиналы документов (загружены)
+
+            .form__row
+                .form__item.form__item_tripple
+                    label.form__label Разворот с фотографией *
+                    .form__file
+                        .file
+                            .file__img
+                                img(src="img/pdf.jpg", alt="")
+                            .file__name Разворот.pdf
+                            .file__remove.icon_trash                        
+
+                .form__item.form__item_tripple
+                    label.form__label Разворот с текущим местом регистрации *
+                    .form__file
+                        .file
+                            .file__img
+                                img(src="img/pdf.jpg", alt="")
+                            .file__name Регистрация.pdf
+                            .file__remove.icon_trash                        
+                .form__item.form__item_tripple
+                    label.form__label Страница сведений о ранее выданном паспорте *
+                    .form__file
+                        .file
+                            .file__img
+                                img(src="img/pdf.jpg", alt="")
+                            .file__name Старый пасспорт... .pdf
+                            .file__remove.icon_trash                        
 
             .form__action
                 button.btn(type="submit") Сохранить изменения

@@ -85,11 +85,12 @@
 
     &-header {
         padding: 15px;
-        min-height: 130px;
+        min-height: 70px;
         color: #666;
         font-size: 18px;
-        background: url("../img/success-head.jpg") 0 0 no-repeat;
-        background-size: cover;
+        // background: url("../img/success-head.jpg") 0 0 no-repeat;
+        // background-size: cover;
+        background: #0BAE78;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -99,7 +100,8 @@
         color: #FFFFFF;
 
         &--error {
-            background-image: url("../img/error-head.jpg");
+            // background-image: url("../img/error-head.jpg");
+            background: #EA5050;
         }
     }
 

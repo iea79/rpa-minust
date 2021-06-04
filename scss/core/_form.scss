@@ -33,13 +33,17 @@
 	}
 
 	&__field:empty {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-
 		&:before {
 			content: attr(data-placeholder);
 			color: $input_placeholder_color;
+			flex: none;
+			padding-left: 7px;
+			max-width: 100%;
+			display: block;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			text-transform: uppercase;
 		}
 	}
 }
@@ -60,9 +64,8 @@ textarea {
 	background-color: $input_bg_color;
 	border: 1px solid $input_border_color;
 	font-family: $main_font_family;
-	color: $input_color;
+	color: #637A92;
 	padding: 12.5px 13px;
-	text-transform: uppercase;
 	outline: none;
 	font-size: 12px;
 	font-weight: 400;
@@ -89,6 +92,7 @@ textarea {
 	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
+		text-transform: uppercase;
 		color: $input_placeholder_color;
 	}
 }

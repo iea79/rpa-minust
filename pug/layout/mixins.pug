@@ -10,13 +10,14 @@ mixin textarea(placeholder, valid=true)
     else
         textarea.form__field.invalid(placeholder=placeholder)
 
-mixin select(placehoder, options, valid=true, multyple=false)
+mixin select(placehoder, options, valid=true, multiple=false)
     - invalid = ""; 
     if !valid
         - invalid = "invalid"; 
 
-    select.form__select(name="" class=invalid data-placeholder=placehoder multyple=multyple)
-        option(value="")
+    select.form__select(name="" class=invalid data-placeholder=placehoder multiple=multiple)
+        if !multiple
+            option(value="")
         if options
             each item in options
                 option(value=item)=item
@@ -50,6 +51,7 @@ mixin radio(label, name, check=false, attr="")
 
 mixin file(id)
     label.form__file(for=id)
+        input.file__list(type="hidden")
         input(type="file" id=id multiple="")
         span.form__field(data-placeholder="укажите расположение документа")
         span.btn.btn_border Обзор
