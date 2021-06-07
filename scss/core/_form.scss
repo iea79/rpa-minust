@@ -14,6 +14,7 @@
 		input[type=url],
 		textarea {
 			width: 100%;
+
 		}
 
 		textarea {
@@ -94,6 +95,10 @@ textarea {
 	@include placeholder {
 		text-transform: uppercase;
 		color: $input_placeholder_color;
+	}
+
+	.formTable & {
+		width: 100%;
 	}
 }
 

@@ -231,9 +231,9 @@
         <!-- end form-->
         <!-- begin form-->
         <div class="form">
-          <div class="form__toggle active"></div>
+          <div class="form__toggle"></div>
           <div class="form__legend">Паспортные данные абитуриента<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></div>
-          <div class="form__body open">
+          <div class="form__body">
             <div class="form__sub">Данные документов</div>
             <div class="form__row">
               <div class="form__item">
@@ -571,9 +571,9 @@
         <!-- end form-->
         <!-- begin form-->
         <div class="form">
-          <div class="form__toggle"></div>
+          <div class="form__toggle active"></div>
           <div class="form__legend">Результаты ЕГЭ<i class="icon_alert tooltip" title="&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;&lt;p&gt;Здесь можно выводить дополнительные пояснения по пунктами и размещать еще какой-либо текст.&lt;/p&gt;"></i></div>
-          <div class="form__body">
+          <div class="form__body open">
             <div class="form__row">
               <div class="form__item">
                     <label class="form__check">
@@ -581,7 +581,301 @@
                     </label>
               </div>
             </div>
-            <div class="form__row"></div>
+            <!-- begin formTable-->
+            <div class="formTable">
+              <div class="formTable__head">
+                <div class="formTable__col">Предмет </div>
+                <div class="formTable__col">Количество баллов</div>
+                <div class="formTable__col">Год сдачи</div>
+                <div class="formTable__col">Проверено</div>
+              </div>
+              <div class="formTable__body">
+                <div class="formTable__row">
+                  <div class="formTable__col">
+                    <div class="formTable__label">Предмет </div>
+                    <div class="formTable__field">
+                          <select class="form__select" name="" data-placeholder="Предмет">
+                            <option value=""></option>
+                            <option value="Значение 1">Значение 1</option>
+                            <option value="Значение 2">Значение 2</option>
+                            <option value="Значение 3">Значение 3</option>
+                            <option value="Значение 4">Значение 4</option>
+                            <option value="Значение 5">Значение 5</option>
+                            <option value="Значение 6">Значение 6</option>
+                            <option value="Значение 7">Значение 7</option>
+                            <option value="Значение 8">Значение 8</option>
+                            <option value="Значение 9">Значение 9</option>
+                            <option value="Значение 10">Значение 10</option>
+                          </select>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Количество баллов</div>
+                    <div class="formTable__field">
+                          <input class="form__field" type="number" placeholder="Количество баллов"/>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Год сдачи</div>
+                    <div class="formTable__field">
+                          <select class="form__select" name="" data-placeholder="Год сдачи">
+                            <option value=""></option>
+                            <option value="1999">1999</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                          </select>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Проверено</div>
+                    <div class="formTable__action">
+                      <div class="formTable__status icon_check"></div>
+                      <div class="formTable__delete"><i class="icon_close"> </i>Удалить</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="formTable__row">
+                  <div class="formTable__col">
+                    <div class="formTable__label">Предмет </div>
+                    <div class="formTable__field">
+                          <select class="form__select" name="" data-placeholder="Предмет">
+                            <option value=""></option>
+                            <option value="Значение 1">Значение 1</option>
+                            <option value="Значение 2">Значение 2</option>
+                            <option value="Значение 3">Значение 3</option>
+                            <option value="Значение 4">Значение 4</option>
+                            <option value="Значение 5">Значение 5</option>
+                            <option value="Значение 6">Значение 6</option>
+                            <option value="Значение 7">Значение 7</option>
+                            <option value="Значение 8">Значение 8</option>
+                            <option value="Значение 9">Значение 9</option>
+                            <option value="Значение 10">Значение 10</option>
+                          </select>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Количество баллов</div>
+                    <div class="formTable__field">
+                          <input class="form__field" type="number" placeholder="Количество баллов"/>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Год сдачи</div>
+                    <div class="formTable__field">
+                          <select class="form__select" name="" data-placeholder="Год сдачи">
+                            <option value=""></option>
+                            <option value="1999">1999</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                          </select>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Проверено</div>
+                    <div class="formTable__action">
+                      <div class="formTable__status icon_close"></div>
+                      <div class="formTable__delete"><i class="icon_close"> </i>Удалить</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="formTable__row">
+                  <div class="formTable__col">
+                    <div class="formTable__label">Предмет </div>
+                    <div class="formTable__field">
+                          <select class="form__select" name="" data-placeholder="Предмет">
+                            <option value=""></option>
+                            <option value="Значение 1">Значение 1</option>
+                            <option value="Значение 2">Значение 2</option>
+                            <option value="Значение 3">Значение 3</option>
+                            <option value="Значение 4">Значение 4</option>
+                            <option value="Значение 5">Значение 5</option>
+                            <option value="Значение 6">Значение 6</option>
+                            <option value="Значение 7">Значение 7</option>
+                            <option value="Значение 8">Значение 8</option>
+                            <option value="Значение 9">Значение 9</option>
+                            <option value="Значение 10">Значение 10</option>
+                          </select>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Количество баллов</div>
+                    <div class="formTable__field">
+                          <input class="form__field" type="number" placeholder="Количество баллов"/>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Год сдачи</div>
+                    <div class="formTable__field">
+                          <select class="form__select" name="" data-placeholder="Год сдачи">
+                            <option value=""></option>
+                            <option value="1999">1999</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                          </select>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Проверено</div>
+                    <div class="formTable__action">
+                      <div class="formTable__status icon_check"></div>
+                      <div class="formTable__delete"><i class="icon_close"> </i>Удалить</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="formTable__row">
+                  <div class="formTable__col">
+                    <div class="formTable__label">Предмет </div>
+                    <div class="formTable__field">
+                          <select class="form__select" name="" data-placeholder="Предмет">
+                            <option value=""></option>
+                            <option value="Значение 1">Значение 1</option>
+                            <option value="Значение 2">Значение 2</option>
+                            <option value="Значение 3">Значение 3</option>
+                            <option value="Значение 4">Значение 4</option>
+                            <option value="Значение 5">Значение 5</option>
+                            <option value="Значение 6">Значение 6</option>
+                            <option value="Значение 7">Значение 7</option>
+                            <option value="Значение 8">Значение 8</option>
+                            <option value="Значение 9">Значение 9</option>
+                            <option value="Значение 10">Значение 10</option>
+                          </select>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Количество баллов</div>
+                    <div class="formTable__field">
+                          <input class="form__field" type="number" placeholder="Количество баллов"/>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Год сдачи</div>
+                    <div class="formTable__field">
+                          <select class="form__select" name="" data-placeholder="Год сдачи">
+                            <option value=""></option>
+                            <option value="1999">1999</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                          </select>
+                    </div>
+                  </div>
+                  <div class="formTable__col">
+                    <div class="formTable__label">Проверено</div>
+                    <div class="formTable__action">
+                      <div class="formTable__status icon_check"></div>
+                      <div class="formTable__delete"><i class="icon_close"> </i>Удалить</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end formTable-->
+            <div class="formTable__add"><i> </i>Добавить предмет</div>
+            <div class="form__row">
+              <div class="form__item">
+                    <label class="form__check">
+                      <input type="checkbox"/><span>Сдавал с другим паспортом</span>
+                    </label>
+              </div>
+            </div>
+            <div class="form__sub">Данные другого документа для сдачи ЕГЭ</div>
+            <div class="form__row">
+              <div class="form__item">
+                <label class="form__label">Наименование документа *</label>
+                    <select class="form__select" name="" data-placeholder="Введите наименование документа">
+                      <option value=""></option>
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                      <option value="Значение 5">Значение 5</option>
+                      <option value="Значение 6">Значение 6</option>
+                      <option value="Значение 7">Значение 7</option>
+                      <option value="Значение 8">Значение 8</option>
+                      <option value="Значение 9">Значение 9</option>
+                      <option value="Значение 10">Значение 10</option>
+                    </select>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Фамилия *</label>
+                    <input class="form__field" type="text" placeholder="Введите фамилию"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Имя *</label>
+                    <input class="form__field" type="text" placeholder="Введите имя"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Отчество *</label>
+                    <input class="form__field" type="text" placeholder="Введите отчество"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Серия документа *</label>
+                    <input class="form__field" type="text" placeholder="Введите серию"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Номер *</label>
+                    <input class="form__field" type="text" placeholder="введите номер документа"/>
+              </div>
+              <div class="form__item">
+                <label class="form__label">Когда выдан *</label>
+                    <input class="form__field" type="text" placeholder="Введите дату выдачи"/>
+              </div>
+            </div>
+            <div class="form__action">
+              <button class="btn" type="submit">Сохранить изменения</button>
+              <div class="form__req">* обязательные поля</div>
+            </div>
           </div>
         </div>
         <!-- end form-->

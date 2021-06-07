@@ -118,11 +118,11 @@ block content
 
     // begin form
     .form
-        .form__toggle.active
+        .form__toggle
         .form__legend Паспортные данные абитуриента
             i.icon_alert(class="tooltip" title=tooltip)
 
-        .form__body.open
+        .form__body
 
             .form__sub Данные документов
 
@@ -337,15 +337,87 @@ block content
 
     // begin form
     .form
-        .form__toggle
+        .form__toggle.active
         .form__legend Результаты ЕГЭ
             i.icon_alert(class="tooltip" title=tooltip)
 
-        .form__body
+        .form__body.open
             .form__row
                 .form__item
                     +checkbox("Не сдавал ЕГЭ")
+
+            // begin formTable
+            .formTable
+                .formTable__head
+                    .formTable__col Предмет 
+                    .formTable__col Количество баллов
+                    .formTable__col Год сдачи
+                    .formTable__col Проверено
+                .formTable__body
+                    each item in [true, false, true, true]
+                        .formTable__row
+                            .formTable__col
+                                .formTable__label Предмет 
+                                .formTable__field
+                                    +select("Предмет")
+                            .formTable__col
+                                .formTable__label Количество баллов
+                                .formTable__field
+                                    +input("Количество баллов", true, 'number')
+                            .formTable__col
+                                .formTable__label Год сдачи
+                                .formTable__field
+                                    +select("Год сдачи", [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014])
+                            .formTable__col
+                                .formTable__label Проверено
+                                .formTable__action
+                                    if item === false
+                                        .formTable__status.icon_close
+                                    else
+                                        .formTable__status.icon_check
+                                    .formTable__delete
+                                        i.icon_close 
+                                        | Удалить
+
+            // end formTable
+
+            .formTable__add
+                i 
+                | Добавить предмет
+
             .form__row
+                .form__item
+                    +checkbox("Сдавал с другим паспортом")
+
+            .form__sub Данные другого документа для сдачи ЕГЭ
+
+            .form__row
+                .form__item
+                    label.form__label Наименование документа *
+                    +select("Введите наименование документа")
+                .form__item
+                    label.form__label Фамилия *
+                    +input("Введите фамилию")
+                .form__item
+                    label.form__label Имя *
+                    +input("Введите имя")
+                .form__item
+                    label.form__label Отчество *
+                    +input("Введите отчество")
+                .form__item
+                    label.form__label Серия документа *
+                    +input("Введите серию")
+                .form__item
+                    label.form__label Номер *
+                    +input("введите номер документа")
+                .form__item
+                    label.form__label Когда выдан *
+                    +input("Введите дату выдачи")
+
+            .form__action
+                button.btn(type="submit") Сохранить изменения
+                .form__req * обязательные поля
+
 
     // end form
 

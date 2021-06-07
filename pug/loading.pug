@@ -1,0 +1,10 @@
+extends layout/layout.pug
+block variables
+    - pageNum = 0;
+    - pageName = "";
+block content
+    .loader
+        .loader__content
+            img(src="img/logo-loader.svg", alt="")
+            .loader__text Ваш запрос обрабатывается...
+            .loader__progress
