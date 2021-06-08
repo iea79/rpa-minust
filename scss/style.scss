@@ -815,6 +815,26 @@
         // margin-bottom: 0;
     }
 
+    &__text {
+        line-height: 168.1%;
+        margin-bottom: 35px;
+        font-weight: 300;
+    }
+
+    &__list {
+        ul {
+            list-style: none;
+            font-weight: 300;
+            line-height: 1.5;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
     &__legend {
         font-weight: 300;
         font-size: 26px;
@@ -1034,6 +1054,11 @@
             @media (min-width: 1200px) {
                 width: 15%;
             }
+        }
+
+        &_middle {
+            align-self: flex-end;
+            padding-bottom: 10px;
         }
     }
 
@@ -2001,9 +2026,20 @@
         flex-wrap: wrap;
         padding-left: 30px;
 
+        &_short {
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+
         @media (min-width: 992px) {
             padding-left: 40px;
             max-width: 888px;
+
+            &_short {
+                padding-left: 0;
+                margin-bottom: 30px;
+                // max-width: 700px;
+            }
         }
     }
 
