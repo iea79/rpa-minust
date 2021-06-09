@@ -73,6 +73,7 @@ $(document).ready(function() {
         maxWidth: 331,
         arrow: false,
         contentAsHTML: true,
+        interactive: true
     });
 
     $('.scrollbar').niceScroll(scrollOptions);
