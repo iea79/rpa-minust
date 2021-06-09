@@ -1,6 +1,9 @@
 $icomoon-font-family: "rpa" !default;
 $icomoon-font-path: "../fonts" !default;
 
+$icon_files: "\e902";
+$icon_exam: "\e903";
+$icon_checked: "\e904";
 $icon_location: "\e900";
 $icon_clip: "\e901";
 $icon_trash: "\e908";
@@ -38,6 +41,24 @@ $icon_alert: "\e913";
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_files {
+    &:before {
+        content: $icon_files;
+    }
+}
+
+.icon_exam {
+    &:before {
+        content: $icon_exam;
+    }
+}
+
+.icon_checked {
+    &:before {
+        content: $icon_checked;
+    }
 }
 
 .icon_location {
