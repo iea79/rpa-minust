@@ -1,6 +1,9 @@
 $icomoon-font-family: "rpa" !default;
 $icomoon-font-path: "../fonts" !default;
 
+$icon_arrow-down: "\e905";
+$icon_arrow-up: "\e906";
+$icon_edit: "\e907";
 $icon_files: "\e902";
 $icon_exam: "\e903";
 $icon_checked: "\e904";
@@ -41,6 +44,24 @@ $icon_alert: "\e913";
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_arrow-down {
+    &:before {
+        content: $icon_arrow-down;
+    }
+}
+
+.icon_arrow-up {
+    &:before {
+        content: $icon_arrow-up;
+    }
+}
+
+.icon_edit {
+    &:before {
+        content: $icon_edit;
+    }
 }
 
 .icon_files {
